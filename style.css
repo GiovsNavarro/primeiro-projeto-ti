@@ -8,59 +8,78 @@
 /* Corpo da página */
 body {
   font-family: 'Arial', Helvetica, sans-serif;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: linear-gradient(135deg, #4b4ca2, #3b3f8a); /* roxo mais escuro e profissional */
   color: white;
   display: flex;
   justify-content: center;
   padding: 20px;
   min-height: 100vh;
   position: relative;
+  line-height: 1.5;
 }
 
 /* Imagens laterais */
-/* Imagens laterais - mais próximas do container e maiores */
 .side-img {
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
-  max-height: 130%; /* um pouco maior */
+  max-height: 150%; /* aumentadas */
   opacity: 0.95;
   z-index: 1;
 }
 
-/* Ajustando posição lateral */
 .side-img.left {
-  left: 90px; /* afasta da borda, mais próximo do container */
+  left: 100px; /* afastada da borda, mais próximo do container */
 }
 
 .side-img.right {
-  right: 75px; /* afasta da borda, mais próximo do container */
+  right: 100px; /* afastada da borda, mais próximo do container */
 }
 
-/* Responsivo - no celular escondemos para não atrapalhar */
+/* Responsivo - no celular escondemos */
 @media (max-width: 900px) {
   .side-img {
     display: none;
   }
 }
+
 /* Container central */
 .container {
-  background-color: rgba(0,0,0,0.6);
-  padding: 40px 30px;
+  background-color: rgba(0,0,0,0.65); /* mais contraste com o roxo escuro */
+  padding: 50px 40px;
   border-radius: 15px;
-  max-width: 700px;
+  max-width: 750px; /* container um pouco maior */
   width: 100%;
   z-index: 2; /* acima das imagens */
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.5);
 }
 
 /* Títulos */
-h1 { font-size: 2.2em; margin-bottom: 15px; text-align: center; }
-h2 { font-size: 1.8em; margin: 25px 0 15px 0; text-align: center; }
-h3 { font-size: 1.3em; margin: 10px 0; text-align: center; }
+h1 { 
+  font-size: 2em; /* menor que antes */
+  margin-bottom: 20px;
+  text-align: center; 
+}
+
+h2 { 
+  font-size: 1.5em; /* menor e profissional */
+  margin: 30px 0 15px 0; 
+  text-align: center; 
+}
+
+h3 { 
+  font-size: 1.2em; 
+  margin: 10px 0; 
+  text-align: center; 
+}
 
 /* Parágrafos */
-p { font-size: 1.1em; line-height: 1.6; margin-bottom: 15px; text-align: center; }
+p { 
+  font-size: 1em; /* mais discreto */
+  line-height: 1.6; 
+  margin-bottom: 15px; 
+  text-align: center; 
+}
 
 /* Skills */
 ul.skills {
@@ -68,19 +87,21 @@ ul.skills {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 12px;
   margin: 20px 0;
 }
 
 ul.skills li {
-  background: rgba(255,255,255,0.1);
-  padding: 8px 15px;
+  background: rgba(255,255,255,0.12);
+  padding: 7px 12px;
   border-radius: 20px;
-  font-size: 1em;
+  font-size: 0.95em;
   transition: background 0.3s ease;
 }
 
-ul.skills li:hover { background: rgba(255,255,255,0.3); }
+ul.skills li:hover { 
+  background: rgba(255,255,255,0.25); 
+}
 
 /* Projetos */
 .projects {
@@ -88,20 +109,20 @@ ul.skills li:hover { background: rgba(255,255,255,0.3); }
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
-  margin: 20px 0;
+  margin: 25px 0;
 }
 
 .project-card {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.12);
   padding: 15px;
   border-radius: 15px;
-  width: 250px;
+  width: 260px; /* levemente maior */
   transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  background: rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.22);
 }
 
 .project-card img {
@@ -117,21 +138,21 @@ ul.skills li:hover { background: rgba(255,255,255,0.3); }
   gap: 8px;
   text-decoration: none;
   color: white;
-  background-color: #4c6ef5;
-  padding: 10px 20px;
+  background-color: #3b3f8a; /* mais escuro e profissional */
+  padding: 10px 18px;
   border-radius: 25px;
   font-weight: bold;
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .btn:hover {
-  background-color: #364fc7;
+  background-color: #2e306b;
   transform: translateY(-2px);
 }
 
 /* Contato */
 .contact {
-  margin-top: 15px;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   gap: 15px;
@@ -140,13 +161,9 @@ ul.skills li:hover { background: rgba(255,255,255,0.3); }
 
 /* Responsivo */
 @media (max-width: 900px) {
-  .side-img {
-    display: none; /* esconde imagens laterais no celular */
-  }
-
   .container {
     max-width: 90%;
-    padding: 30px 20px;
+    padding: 35px 20px;
   }
 
   .projects {
@@ -157,4 +174,9 @@ ul.skills li:hover { background: rgba(255,255,255,0.3); }
   .project-card {
     width: 80%;
   }
+}
+
+@media (max-width: 500px) {
+  h1 { font-size: 1.6em; }
+  h2 { font-size: 1.3em; }
 }
