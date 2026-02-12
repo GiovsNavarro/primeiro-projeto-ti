@@ -18,23 +18,31 @@ body {
 }
 
 /* Imagens laterais */
+/* Imagens laterais - mais próximas do container e maiores */
 .side-img {
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
-  max-height: 90%;
-  opacity: 0.9;
+  max-height: 95%; /* um pouco maior */
+  opacity: 0.95;
   z-index: 1;
 }
 
+/* Ajustando posição lateral */
 .side-img.left {
-  left: 0;
+  left: 80px; /* afasta da borda, mais próximo do container */
 }
 
 .side-img.right {
-  right: 0;
+  right: 80px; /* afasta da borda, mais próximo do container */
 }
 
+/* Responsivo - no celular escondemos para não atrapalhar */
+@media (max-width: 900px) {
+  .side-img {
+    display: none;
+  }
+}
 /* Container central */
 .container {
   background-color: rgba(0,0,0,0.6);
