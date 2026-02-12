@@ -1,43 +1,72 @@
+/* Estilo geral do corpo */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  background-attachment: fixed;
+  color: white;
+  text-align: center;
+  padding: 50px;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
+/* Container centralizado */
 .container {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  max-width: 600px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
+/* Títulos */
 h1 {
-    margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
-input {
-    display: block;
-    margin: 10px auto;
-    padding: 10px;
-    width: 80%;
-    border-radius: 6px;
-    border: 1px solid #ccc;
+h2 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 22px;
 }
 
-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 6px;
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
+/* Parágrafos */
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
 }
 
-button:hover {
-    background-color: #0056b3;
+/* Lista */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+ul li {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+/* Links */
+a {
+  color: #9bd0ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Linha horizontal estilizada */
+hr {
+  border: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 20px 0;
 }
