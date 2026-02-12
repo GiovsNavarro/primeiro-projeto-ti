@@ -23,18 +23,18 @@ body {
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
-  max-height: 95%; /* um pouco maior */
+  max-height: 110%; /* um pouco maior */
   opacity: 0.95;
   z-index: 1;
 }
 
 /* Ajustando posição lateral */
 .side-img.left {
-  left: 80px; /* afasta da borda, mais próximo do container */
+  left: 90px; /* afasta da borda, mais próximo do container */
 }
 
 .side-img.right {
-  right: 80px; /* afasta da borda, mais próximo do container */
+  right: 90px; /* afasta da borda, mais próximo do container */
 }
 
 /* Responsivo - no celular escondemos para não atrapalhar */
