@@ -10,44 +10,49 @@ body {
   font-family: 'Arial', Helvetica, sans-serif;
   background: linear-gradient(135deg, #667eea, #764ba2);
   color: white;
-  text-align: center;
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 100vh;
   padding: 20px;
+  min-height: 100vh;
+  position: relative;
 }
 
-/* Container */
+/* Imagens laterais */
+.side-img {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  max-height: 80%;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.side-img.left {
+  left: 0;
+}
+
+.side-img.right {
+  right: 0;
+}
+
+/* Container central */
 .container {
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.6);
   padding: 40px 30px;
   border-radius: 15px;
   max-width: 700px;
   width: 100%;
+  z-index: 2; /* acima das imagens */
   box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-  transition: transform 0.3s ease;
-}
-
-.container:hover {
-  transform: translateY(-5px);
 }
 
 /* Títulos */
-h1 { font-size: 2.2em; margin-bottom: 15px; }
-h2 { font-size: 1.8em; margin: 25px 0 15px 0; }
-h3 { font-size: 1.3em; margin: 10px 0; }
+h1 { font-size: 2.2em; margin-bottom: 15px; text-align: center; }
+h2 { font-size: 1.8em; margin: 25px 0 15px 0; text-align: center; }
+h3 { font-size: 1.3em; margin: 10px 0; text-align: center; }
 
 /* Parágrafos */
-p { font-size: 1.1em; line-height: 1.6; margin-bottom: 15px; }
-
-/* Linha horizontal */
-hr {
-  border: 0;
-  height: 1px;
-  background: rgba(255,255,255,0.3);
-  margin: 25px 0;
-}
+p { font-size: 1.1em; line-height: 1.6; margin-bottom: 15px; text-align: center; }
 
 /* Skills */
 ul.skills {
@@ -126,7 +131,16 @@ ul.skills li:hover { background: rgba(255,255,255,0.3); }
 }
 
 /* Responsivo */
-@media (max-width: 700px) {
+@media (max-width: 900px) {
+  .side-img {
+    display: none; /* esconde imagens laterais no celular */
+  }
+
+  .container {
+    max-width: 90%;
+    padding: 30px 20px;
+  }
+
   .projects {
     flex-direction: column;
     align-items: center;
@@ -135,10 +149,4 @@ ul.skills li:hover { background: rgba(255,255,255,0.3); }
   .project-card {
     width: 80%;
   }
-}
-
-@media (max-width: 500px) {
-  h1 { font-size: 1.8em; }
-  h2 { font-size: 1.4em; }
-  .container { padding: 30px 20px; }
 }
